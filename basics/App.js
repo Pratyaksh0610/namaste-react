@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("div", {}, [
-  React.createElement("h1", {}, [
-    "NEW START",
-    React.createElement("p", {}, "NEW END"),
-  ]),
-]);
+const jsxHeading = <h1>Hello From jsxHeading</h1>
+console.log(jsxHeading);
+
+
+//JSX is transpiled before it reaches JS by Parcel -> Babel
+
+//JSX => React.createElement => ReactElement- JS Object => HTMLElement
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(jsxHeading);
